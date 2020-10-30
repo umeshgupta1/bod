@@ -1,0 +1,260 @@
+/*** Home Service Version 02 start ***/
+.service-2{
+    display: flex;
+    justify-content: space-between;
+    padding-top:30px;
+    @media @tablet-down{
+        flex-direction: column;
+    }
+   .services-block-three{
+        position:relative;
+        margin-bottom:30px;
+        transition: all 700ms ease;
+        width: 31%;
+        @media @tablet-down{
+            width: 100%;
+        }
+        .inner-box{
+            position:relative;
+            box-shadow: 0px 3px 10px 0px rgba(38,59,94,0.1);
+            padding: 50px 40px;
+            background: white;
+            transition: all 700ms ease;
+            overflow: hidden;
+            &:hover {
+                box-shadow: 8px 14px 15px 0px rgba(136, 136, 136, 0.4);
+                transition: all 700ms ease;
+            }
+            h3{
+                position:relative;
+                font-size: 18px;
+                font-weight: 600;
+                margin-top:18px;
+                padding-bottom:12px;
+                &:before{
+                    position:absolute;
+                    content:'';
+                    left:0px;
+                    bottom:0px;
+                    height:2px;
+                    width:50px;
+                    background-color:#2ee1ff;
+                  }
+              }
+              .text{
+                position:relative;
+                font-size: 15px;
+                line-height:1.8em;
+                margin-top:25px;
+                color: #6a7695; 
+              }
+          }
+    }
+    .mr3.btn-link{
+        position: absolute;
+        width: 150px;
+        background: #2fe1ff;
+        height: 150px;
+        border-radius: 50%;
+        bottom: -91px;
+        right: -77px;
+        color: @white;
+        line-height: 85px;
+        text-align: center;
+        i{
+            color: @white;
+            margin-left: -62px;
+            font-size: 28px;
+          }
+      }
+ 
+ }
+
+ /*** Home Service Version 02 End ***/
+
+//  Technical Ecommerce
+ .banner-overlap.tech::before {
+    background-color: #2390de;
+    content: "";
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+}
+
+/* ----- Navbar Version 02 Start----- */
+.navbar-2{
+    nav{
+         transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out, -o-transform .5s ease-in-out;
+         &.topnav {
+            .navbar-collapse {
+                position: fixed;
+                right: 0;
+                left: initial;
+                width: 465px;
+                background-image: linear-gradient(to right, rgba(35, 206, 213, .67) 0%, rgba(81, 146, 225,  .67) 100%);
+                padding-left: 40px;
+                transform: translate3d(0, 0, 0);
+            }
+            .nav-inner {
+                padding-top: 150px;
+                .right-nav {
+                    text-align: left;
+                }
+            }
+            .top-right {
+                ul li{
+                    padding: 0 15px;
+                    a{
+                        position: relative;
+                        letter-spacing: 2px;
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: -6px;
+                            width: 0;
+                            height: 2px;
+                            background: #24cdd5!important;
+                            margin: auto;
+                            transition: .4s all;
+                          }
+                          &:hover:before, &.active:before{
+                            width: 100%;
+                            color: #24cdd5;
+                          }
+                      }
+                }
+                .button-bar .bar1,
+                .button-bar .bar4{
+                    width: 20px;
+                    background: #061838;
+                }
+                .button-bar .bar3{
+                    width: 12px;
+                    text-align: right;
+                    margin-left: 8px;
+                    background: #061838;
+                }
+                .button-bar{
+                    background: @white;
+                    padding: 16px 14px;
+                    border-radius: 50%;
+                  }
+            }
+         }
+         &.menu-toggle{
+            .bar3{
+                transform: rotate(45deg) translate(1px,0px);
+                width: 20px!important;
+                margin-left: 0!important;
+              }
+            .bar1{
+                transform: rotate(-45deg) translate(-5px,6px);
+             }
+         }
+    }
+ }  
+  /* ----- Navbar Version 02 End----- */
+
+  /* ----- Service Version 02 Start----- */
+  .service-main.v2 {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .service-ft {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        margin: 20px 0;
+        box-shadow: none;
+        transition: all .3s ease;
+        width: 32%;
+        flex-direction: column;
+        &.alternate {
+            flex-direction: column;
+         }
+    }
+}
+ /* ----- Service Version 01 End----- */
+
+  /* ----- Portfolio Version 01 Start----- */
+.our-portfolio{
+    padding: 80px 15px;
+    .portfolio-grid{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &.alternate{
+            flex-direction: row-reverse;
+            .port-item2{
+                text-align: right;
+                padding-right: 30px;
+            }
+        }
+        .port-item1{
+            height: 350px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center; 
+            flex: 0 0 41.66667%;
+            max-width: 41.66667%; 
+        }
+        .port-item2{
+            flex: 0 0 58.33333%;
+            max-width: 58.33333%;
+            padding-left: 30px;
+            @media @tablet-down{
+                padding: 0!important;
+                margin:30px 0;
+            }
+        }
+        @media @tablet-down{
+            display: block;;
+            .port-item1, .port-item2{
+                max-width: 100%;
+                text-align: left!important;
+                padding: 0;
+            }
+        }
+    }
+    .subheading{
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 2px;
+        position: relative;
+        &::before{
+            content: "";
+            width: 30px;
+            height: 2px;
+            background: #2ee1ff;
+            position: absolute;
+            top: -7px;
+        }
+    }
+    .top-bar::before{
+        margin: 0 0 8px;
+    }
+    .view-portfolio{
+        text-transform: uppercase;
+        font-size: 11px;
+        letter-spacing: 3px;
+        color: @black;
+        font-weight: 700;
+        border: 1px solid #d9d9e1;
+        padding: 10px 21px;
+        border-radius: 5px;
+        margin-top: 15px;
+        display: inline-block;
+        transition: all 0.3s ease;
+        &:hover{
+            background-color: @blue;
+            color: @white;
+            text-decoration: none;
+
+        }
+    }
+}
+  /* ----- Portfolio Version 01 Start----- */

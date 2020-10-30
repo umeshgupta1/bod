@@ -1,0 +1,132 @@
+/*** Footer Ui Start ***/
+footer{
+    background-color: @darkBlue;
+    padding: 70px 0;
+    .footer-item{
+        display: flex;
+        justify-content: space-between;
+        color: @white;
+        .item{
+            ul li{
+                line-height: @medLineHeight;
+            }
+        }
+    }
+    .footer-logo{
+        max-width: 267px;
+    }
+    @media @desktop-down{
+        .footer-item{
+           .item{
+               &:nth-child(2){
+                   padding: 0 10px;
+               }
+           }
+        }
+    }
+     @media @tablet-down{
+        padding: 50px 0;
+        .footer-item{
+            flex-direction: column;
+            .item{
+                &:nth-child(2){
+                    padding: 0;
+                }
+            }
+        }
+        .footer-logo{
+            display: none;
+        }
+    }
+    h3{
+        font-size: @smallFont;
+        text-transform: uppercase;
+        color: @white;
+        font-family: 'Gotham-Book';
+        font-weight: 400;
+        padding-bottom: 30px;
+        padding-top: 5px;
+        @media @tablet-down{
+            padding: 30px 0 15px;
+        }
+    }
+    .newsletter{
+        position: relative;
+        input{
+            height: 48px;
+            width: 100%;
+            background: transparent;
+            border: 0;
+            border-bottom: 1px solid #688aa1;
+            color: #688aa1;
+            font-size: @baseFont;
+            padding-right: 47px;
+            margin-top: 20px;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder {
+                color: #688aa1;
+            }
+        }
+        button{
+            position: absolute;
+            bottom: 8px;
+            right: 0;
+            height: 40px;
+            font-size: 18px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            &:focus{
+                outline: none;
+            }
+            i{
+                background-color: @blue;
+                color: @white;
+                height: 40px;
+                width: 40px;
+                line-height: 40px;
+                border-radius: 50%;
+            }
+        }
+    }
+    .contact-item{
+        a{
+            display: block;
+            padding: 10px 0;
+            &:first-child{
+                font-family: 'Sentinel-Book';
+                color: @lightSky;
+                font-size: @largeFont;
+            }
+        }
+    }
+    .copyright{
+        display: none;
+        @media @tablet-up{
+            font-size: 14px;
+            padding-top: 80px;
+            display: block;
+        }
+    }
+    .social-icon li a{
+        i{
+            background-color: #274962;
+        }
+        &:hover i{
+            background-color: @blue;
+        }
+    }
+}
+.copyright-bottom{
+    display: none;
+    @media @tablet-down{
+        padding:10px 15px;
+        background-color: #264962;
+        color: @white;
+        font-size: 13px;
+        display: block;
+    }
+}
+/*** Footer Ui End ***/
