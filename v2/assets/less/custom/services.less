@@ -6,7 +6,7 @@
     background-image: url('../images/service.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 185px 0;
+    padding: 110px 0;
     background-position-y: 30%;
     position: relative;
     @media @tablet-down{
@@ -27,16 +27,13 @@
         h1{
             font-weight: 600;
             font-size: 33px;
-            line-height: 33px;
-            padding-bottom: 10px;
             letter-spacing: 4px;
             text-transform: uppercase;
+            position: relative;
+            top: 35px;
         }
         .mod-breadcrumbs {
             font-weight: 600;
-            // span{
-            //     color: @blue;
-            // }    
         }
     }
 }
@@ -44,18 +41,16 @@ h2.s-pt{
     padding-top: 50px;
 }
 .service-main{
-    padding-bottom:50px;
-    @media @tablet-down{
-        padding:30px 0;
-    }
+    padding:30px 0;
     .service-ft{
         display: flex;
         align-items: center;
         padding: 10px;
         margin:30px 0;
-        box-shadow: 6px 9px 20px 0 rgba(136,136,136,0.1);
+        // box-shadow: 6px 9px 20px 0 rgba(136,136,136,0.1);
         transition: all 0.3s ease;
         border: 1px solid #eaeaea;
+        box-shadow: 0 3px 10px 0 rgba(38,59,94,0.1);
         &.alternate{
             flex-direction: row-reverse;
         }
@@ -70,16 +65,23 @@ h2.s-pt{
             padding:20px 15px;
         }
         h4{
-            font-family: 'Sentinel-Book';
-            font-weight: 400;
-            font-size: 24px;
-            padding-bottom: 10px;
-            &.top-bar::before{
-                margin-left: 0;
+            font-weight: 600;
+            font-size: 18px;
+            padding-bottom: 15px;
+            position: relative;
+            margin-bottom: 15px;
+            &::before{
+                position: absolute;
+                content: '';
+                left: 0;
+                bottom: 0;
+                height: 2px;
+                width: 50px;
+                background-color: #2ee1ff;
             }
         }
         img{
-            max-width: 150px;
+            max-width: 120px;
         }
         li{
             &:nth-child(2){

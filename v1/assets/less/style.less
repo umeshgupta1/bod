@@ -29,9 +29,7 @@ body{
     color: @baseColor;
     line-height: @baseLineHeight;
     background-color: @white;
-    @media @tablet-down {
-    	padding-top: 77px;
-    }
+    overflow-x: hidden;
 }
 ul{
     padding: 0;
@@ -92,6 +90,7 @@ img {
     &.show {
         visibility: visible;
         opacity: 1;
+        z-index: 1;
       }
     &.hide {
         visibility: hidden;

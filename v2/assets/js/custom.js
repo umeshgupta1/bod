@@ -2,6 +2,7 @@
 function customMenu(x) {
   var x = document.getElementById("header");
   x.classList.toggle("menu-toggle");
+  $("body").toggleClass("menu-open");
 }
 jQuery(document).ready(function($) {
   // Styicky Header
@@ -10,10 +11,10 @@ jQuery(document).ready(function($) {
 
     //>=, not <=
     if (scroll >= 250) {
-        $(".topnav").addClass("sticky");
+        $(".header").addClass("sticky");
     }
     else{
-      $(".topnav").removeClass("sticky");
+      $(".header").removeClass("sticky");
     }
   }); 
 
@@ -125,9 +126,17 @@ scrollToTopButton.onclick = function(e) {
   scrollToTop();
 }
 // AOS animation
-AOS.init({
-  duration: 1200,
-})
+function aos_init() {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    once: false,
+    mirror: false
+  });
+}
+$(window).on('load', function() {
+  aos_init();
+});
 
 // Map
 function initMap() {

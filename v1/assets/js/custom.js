@@ -125,9 +125,18 @@ scrollToTopButton.onclick = function(e) {
   scrollToTop();
 }
 // AOS animation
-AOS.init({
-  duration: 1200,
-})
+// Init AOS
+function aos_init() {
+  AOS.init({
+    duration: 1000,
+    easing: "ease-in-out",
+    once: false,
+    mirror: false
+  });
+}
+$(window).on('load', function() {
+  aos_init();
+});
 
 // Map
 function initMap() {
