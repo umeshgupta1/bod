@@ -1,10 +1,15 @@
-// Menu toggle
-function customMenu(x) {
-  var x = document.getElementById("header");
-  x.classList.toggle("menu-toggle");
-  $("body").toggleClass("menu-open");
-}
 jQuery(document).ready(function($) {
+  $(".button-bar").click(function(e) {
+    $(".overlay").remove();
+    $("body").toggleClass("menu-open");
+    $("#header").toggleClass("menu-toggle");
+    $("<div class='overlay'></div>").insertBefore(".navbar-collapse");
+  });
+  $
+  $("body").on("click", ".overlay", function(){
+    $(".button-bar").trigger("click");
+  });
+
   // Styicky Header
   $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
